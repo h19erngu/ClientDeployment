@@ -8,9 +8,8 @@ jobs:
 
     - name: 'checkout the repo'
       uses: actions/checkout@v2
-NEW
-[11:44 AM]
-- name: 'Login to Azure'
+
+    - name: 'Login to Azure'
       uses: azure/login@v1.1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
