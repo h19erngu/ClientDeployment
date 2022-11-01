@@ -1,0 +1,16 @@
+on: [push]
+name: Linux_Container_Workflow 
+
+jobs:
+  build-and-deploy-client:
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: 'checkout the repo'
+      uses: actions/checkout@v2
+NEW
+[11:44 AM]
+- name: 'Login to Azure'
+      uses: azure/login@v1.1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
